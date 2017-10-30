@@ -1,0 +1,68 @@
+@import '../../variables';
+
+header{
+    .logo{
+        position: absolute;
+        bottom: -10px;
+        left: -20px;
+        z-index: 1;
+    }
+}
+.wrap{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 150px 0 20px 0;
+    .main-title{
+        font-size: 1.9em;
+        color: $dark-grey;
+        text-transform: uppercase;
+        text-align: right;
+        margin: 0;
+        font-family: $mont;
+        font-weight: bold;
+        background-color: $white;
+        width: 80%;
+        float: right;
+        padding: 10px 30px;
+        box-sizing: border-box;
+        border-radius: 2px;
+    }
+    
+}
+
+
+
+@media only screen and (max-width: 960px){
+    header{
+        .logo{
+            position: relative;
+            margin: 10px auto;
+            left: initial;
+            bottom: initial;
+            display: block;
+            max-width: 130px;
+        }
+    }
+    .wrap{
+        margin: 0;
+        background-color: $white;
+        padding: 10px 0;
+        border-bottom: 1px solid $light-grey;
+        .main-title{
+            float: none;
+            width: 100%;
+            text-align: left;
+            background-color: initial;  
+            font-size: 1.5em;       
+        }
+    }
+}
+
+@media only screen and (max-width: 750px){
+    .wrap{
+        .main-title{
+            font-size: 1.3em;           
+        }
+    }
+}

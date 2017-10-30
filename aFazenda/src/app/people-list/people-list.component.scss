@@ -1,0 +1,185 @@
+@import '../../variables';
+
+.list{
+    background-color: $white;
+    border-radius: 2px;
+    .wrap{
+        position: relative;
+        &:hover{
+            .item{
+                background-color: $red;
+                .pic{
+                    border: 4px solid $white;
+                }
+                .details{
+                    h2{
+                        color: $white;
+                    }
+                    p{
+                        color: $wine;
+                    }
+                }
+            }
+            .hover{
+                display: flex;
+            }
+        }
+    }
+}
+
+
+.hover{
+    display: none;
+    position: relative;
+    background-color: $white;
+    border-radius: 2px;
+    position: absolute;
+    left: 107%;
+    top: 0;
+    max-width: 155px;
+    width: 100%;    
+    top: 50%;
+    margin-top: -25px;
+    div{
+        position: relative;
+        .result{
+            color: $grey;
+            font-weight: bold;
+            font-size: 1.5em;
+            margin: 3px 0px;
+            text-align: center;
+        }
+        .description{
+            color: $ice;
+            font-size: 10px;
+            background-color: $red;
+            width: 100%;
+            margin: 0;
+            padding: 2px 0;
+            text-align: center;
+            font-family: $mont;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+    .yes{
+        border-right: 1px solid $grey;
+        width: 40%;
+        img{
+            position: absolute;
+            right: 100%;
+            top: 50%;
+            margin-top: -9.5px;                
+        }
+    }
+    .no{
+        width: 60%;
+        border-left: 1px solid $faded-red;;
+    }
+}
+
+.item{
+    position: relative;
+    width: 100%;
+    background-color: $white;
+    overflow: hidden;
+    padding: 7px 20px;
+    box-sizing: border-box;
+    &.odd{
+        background-color: $light-grey;
+    }
+    
+    .pic{
+        position: relative;
+        float: left;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        border: 4px solid $red;
+        margin: 5px 0;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        .rank{
+            position: absolute;
+            bottom: -5px;
+            right: -5px;
+            background-color: $white;
+            color: $medium-grey;
+            border: 1px solid $medium-grey;
+            padding: 1px 6px;
+            border-radius: 100%;
+            font-size: 13px;
+            font-family: $mont;
+            font-weight: bold;
+        }
+    }
+    .details{
+        position: relative;
+        float: left;
+        padding: 14px 20px;
+        box-sizing: border-box;
+        h2{
+            font-family: $mont;
+            color: $red;
+            margin: 5px 0 0 0;            
+            font-size: 1.12em;
+        }
+        p{
+            font-family: $mont;
+            color: $grey;
+            margin: 0;
+            font-size: 12px;
+        }
+    }
+    
+}
+
+
+
+@media only screen and (max-width: 960px){
+    .hover{
+        position: relative;
+        display: flex;
+        top: initial;
+        margin-top: 0;
+        left: initial;
+        max-width: 100%;
+        margin: 0;
+        &.odd{
+            background-color: $light-grey;
+        }
+        .yes{
+            width: 50%;
+            img{
+                display: none;
+            }
+        }
+        .no{
+            width: 50%;
+        }
+    }
+    .list{
+        .wrap{
+            &:hover{
+                .item{
+                    background-color: initial;
+                    &.odd{
+                        background-color: $light-grey;
+                    }
+                    .pic{
+                        border: 4px solid $red;
+                    }
+                    .details{
+                        h2{
+                            color: $red;
+                        }
+                        p{
+                            color: $grey;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

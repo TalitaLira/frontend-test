@@ -1,0 +1,25 @@
+
+<div class="content list">
+    <div class="wrap" *ngFor="let person of people; let i=index; let o=odd;">
+        <div class="item" [ngClass]="{'odd': o}">
+            <div class="pic" [ngStyle]="{background: 'url(' + person.picture + ')'}">
+                <div class="rank">{{ i + 1 }}</div>
+            </div>
+            <div class="details">
+                <h2>{{ person.name }}</h2>
+                <p [innerHTML]="person.description"></p>
+            </div>
+        </div> 
+        <div class="hover" [ngClass]="{'odd': o}">
+            <div class="yes">
+                <p class="description">Gostam</p>
+                <p class="result">{{ person.likes }}%</p>
+                <img src="../../assets/images/arrow.png" alt="">
+            </div>
+            <div class="no">
+                <p class="description">Não Gostam</p>
+                <p class="result">{{ person.dislikes }}%</p>
+            </div>
+        </div>
+    </div>
+</div>
