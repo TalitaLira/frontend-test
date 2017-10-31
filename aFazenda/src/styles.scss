@@ -1,0 +1,13 @@
+@import './variables';
+
+body{
+    background-color: $dark-grey;
+    margin: 0;
+}
+
+.content{
+    position: relative;
+    max-width: 342px;
+    width: 100%;
+    margin: 0 auto;
+}
