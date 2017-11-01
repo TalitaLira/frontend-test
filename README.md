@@ -2,19 +2,18 @@
 
 A aplicação foi desenvolvida utilizando:
 
-Angular(2+) SASS
+Angular(2+); SASS;
 
-##Rodando o teste
+##Rodando a aplicação 
+O teste foi criado em Angular(2+), utilizando o Angular CLI, sendo assim, houve alterações na estrutura do projeto.
 
-Foram feitas alterações na estrutura do projeto. O teste foi criado em Angular(2+), utilizando o Angular CLI, sendo assim, foi criado um repositório com o nome "aFazenda" no qual está o teste a ser rodado.
-
-Abrindo o terminal nesse diretório, "aFazenda", instale as dependências:
+Abrindo o terminal nesse diretório do projeto, instale as dependências:
 
 npm install
 Após instalar, para rodar a aplicação:
 
 ng serve
-A aplicação irá rodar no http://localhost:4200/
+A aplicação irá rodar em http://localhost:4200/
 
 ##Hospedagem
 
